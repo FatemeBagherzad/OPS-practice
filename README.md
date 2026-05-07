@@ -4,7 +4,7 @@ A single-page UI app built with React + Vite to manage a 13-day action plan and 
 
 ## Live Demo
 
-- Netlify: [Add Netlify URL here](https://ops-practice.netlify.app)
+- Netlify: [ops-practice app](https://ops-practice.netlify.app/)
 
 ## What This Repository Contains
 
