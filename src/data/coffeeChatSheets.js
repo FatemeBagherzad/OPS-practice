@@ -253,23 +253,45 @@ export const coffeeChatSheets = {
           'What experience do you have working with stakeholders or non-technical teams?',
           'Why software development and data analysis together?',
           'What do you know about working in government?',
+          "What's a project you're proud of?",
+          'What are your strengths and weaknesses?',
         ],
       },
       {
-        title: '4. Sample Answers You Can Adapt',
+        title: '4. Sample Answers To Luke Questions',
         variant: 'cheat-card--violet',
         paragraphs: [
           {
             label: 'Tell me about yourself:',
-            text: '“I’m a software developer and data analyst with experience across data, reporting, and application development. I enjoy building solutions that make information more useful, whether that means cleaning and modeling data, creating dashboards, or developing tools that improve workflows. What draws me toward public-sector work is the chance to apply those skills to services that affect people directly.”',
+            text: "I started with a bachelor's degree in Pure Mathematics, then worked as a math teacher and later moved into technical drawing and design. I learned tools like AutoCAD, 3ds Max, CATIA, Adobe, and Office, and over time became a Design Manager. In that role, I noticed repetitive work, so I learned scripting in 3ds Max to automate tasks. After immigrating to Canada, I completed a Software Engineering diploma, worked as a TA for about 11 months, and then joined AutoForm as a developer. At AutoForm I worked across front-end, back-end, and databases, and also handled QA in a small team using Playwright and AI-assisted UI testing. I also used Docker to deploy demo projects to AWS EC2. Now I am focused on continuing my software developer career in Canada, especially in roles where I can combine development and data analysis.",
           },
           {
-            label: 'Why public service:',
-            text: '“What appeals to me is the combination of real public impact and meaningful complexity. Public-sector technology is not only about building features quickly, it is also about trust, accessibility, policy context, and improving services for a wide range of people.”',
+            label: 'Why public service or civic tech:',
+            text: 'What attracts me is the chance to build technology that improves services for people at scale. I like that public-sector digital work is not only about speed, it is also about trust, accessibility, policy context, and long-term value. That environment fits how I work: structured, user-focused, and impact-driven.',
           },
           {
-            label: 'Stakeholders:',
-            text: '“I try to translate technical issues into clear business language, confirm requirements early, and keep feedback loops short. A lot of the value comes from understanding the real operational problem, not just the technical request.”',
+            label: 'What role are you looking for:',
+            text: 'I am open to full-stack, front-end, or back-end roles. I enjoy working across the stack, and in my last role I did UI implementation, backend integration, end-to-end testing with Playwright, and deployment setup with Docker. I can contribute where the team needs me most.',
+          },
+          {
+            label: 'Working with stakeholders and non-technical teams:',
+            text: 'I focus on translating technical details into clear business language, validating requirements early, and keeping short feedback loops. In small teams, this helps avoid rework and keeps everyone aligned. I have found that the best technical decisions come from understanding the real operational problem first.',
+          },
+          {
+            label: 'Why software development and data analysis together:',
+            text: 'For me they are complementary. Data analysis helps identify where the real problem is and how success should be measured. Software development turns those insights into practical solutions that people can use every day. Combining both helps me move from insight to implementation.',
+          },
+          {
+            label: 'What do you know about working in government:',
+            text: 'My understanding is that government work requires balancing service outcomes with accessibility, privacy, accountability, and policy constraints. It often involves more cross-functional coordination, but it also creates opportunities to deliver meaningful long-term impact if solutions are built thoughtfully.',
+          },
+          {
+            label: "Project you're proud of:",
+            text: 'At AutoForm, we were building a complex feature with heavy state management. As the team used Copilot more, coding style and structure became inconsistent and changes sometimes broke existing behavior. I researched a better approach and created shared AI instruction files with coding standards, architectural rules, and best practices. After the team adopted it, output became more stable, consistent, and maintainable. I am proud of this because it improved team-wide productivity and code quality, not just my own work.',
+          },
+          {
+            label: 'Strengths and weaknesses:',
+            text: 'A key strength is fast learning with a structured problem-solving mindset from my math background. I have repeatedly adapted to new domains and tools, from design systems to full-stack development and QA automation. A weakness I continue improving is that I can go too deep on details. I now manage this better by timeboxing tasks and stepping back earlier to re-check priorities and overall impact.',
           },
         ],
       },
