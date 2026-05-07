@@ -8,6 +8,7 @@
   --accent: #2563eb;
   --red: #ef4444;
   --orange: #f97316;
+  --yellow: #eab308;
   --green: #22c55e;
   --blue: #3b82f6;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -129,6 +130,10 @@ body {
 
 .topic-button {
   border-left: 4px solid var(--green);
+}
+
+.people-button {
+  border-left: 4px solid var(--yellow);
 }
 
 .menu-children-panel {
