@@ -234,16 +234,8 @@ export const coffeeChatSheets = {
         variant: 'cheat-card--sky',
         list: [
           {
-            label: 'How you are connected:',
-            text: 'Alan Harnum introduced you to Luke in a LinkedIn group message.',
-          },
-          {
             label: 'Luke direct response to you:',
             text: 'He replied positively and invited you to email him directly to coordinate time.',
-          },
-          {
-            label: 'Contact he shared:',
-            text: 'luke.simcoe@toronto.ca',
           },
           {
             label: 'Availability he shared:',

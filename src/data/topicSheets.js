@@ -164,6 +164,75 @@ export const topicSheets = {
           'AODA makes accessibility a legal requirement in Ontario.',
         ],
       },
+      {
+        title:
+          '10. Top 15 Likely Interview Questions + Strong Answer Direction',
+        variant: 'cheat-card--green-strong',
+        paragraphs: [
+          {
+            label: '1) Why this MCCSS role?',
+            text: 'Connect to public impact, evidence-based decision-making, and your interest in building reliable data solutions that improve social assistance programs.',
+          },
+          {
+            label: '2) Tell us about your technical background.',
+            text: 'Give a concise journey: math foundation, software engineering diploma, full-stack + data work, QA automation, and deployment experience.',
+          },
+          {
+            label: '3) How do you ensure data quality?',
+            text: 'Mention validation rules, profiling, null checks, consistency checks, reconciliation with source totals, and documenting assumptions.',
+          },
+          {
+            label: '4) How do you design a useful dashboard?',
+            text: 'Start from user questions and decisions, define KPIs, model data cleanly, keep visuals accessible, and validate results with stakeholders.',
+          },
+          {
+            label: '5) How would you apply GO-ITS 25 (Security)?',
+            text: 'Use least-privilege access, secure secrets handling, auditability, sensitive-data controls, and security considerations across design/dev/ops.',
+          },
+          {
+            label:
+              '6) How would you apply GO-ITS 54, WCAG, and AODA in analytics work?',
+            text: 'Describe keyboard accessibility, contrast, clear labels, error messaging, semantic structure, and testing with accessibility requirements as non-negotiable.',
+          },
+          {
+            label: '7) How do you handle unclear requirements?',
+            text: 'Clarify outcomes first, confirm assumptions early, create small checkpoints, and iterate with stakeholders to reduce rework.',
+          },
+          {
+            label: '8) Describe a complex problem you solved.',
+            text: 'Use STAR: situation, your role, technical + collaboration actions, measurable outcome, and what you improved for maintainability.',
+          },
+          {
+            label: '9) How do you work with non-technical teams?',
+            text: 'Translate technical topics into business language, focus on decisions and impact, and communicate trade-offs clearly.',
+          },
+          {
+            label: '10) How do you prioritize speed vs quality?',
+            text: 'Ship iteratively but protect trust: baseline checks, version control, peer feedback, and clear acceptance criteria.',
+          },
+          {
+            label: '11) What is your approach to data modeling?',
+            text: 'Use a business-first grain, clear fact/dimension design, consistent definitions, and model decisions that support reporting performance and clarity.',
+          },
+          {
+            label: '12) How do you test and validate analytics outputs?',
+            text: 'Cross-check metrics, compare with known baselines, test edge cases, and involve domain users before release.',
+          },
+          {
+            label: '13) How do you keep solutions maintainable?',
+            text: 'Use modular design, consistent naming, documentation, version control discipline, and reusable patterns.',
+          },
+          {
+            label: '14) What strengths will you bring to this team?',
+            text: 'Highlight fast learning, structured problem-solving, cross-functional collaboration, and hands-on end-to-end delivery across dev/data/testing.',
+          },
+          {
+            label: '15) Why should we hire you?',
+            text: 'Combine role fit + mission fit: you can build practical data products with quality and accessibility in mind, and you care about outcomes for Ontarians.',
+          },
+        ],
+        note: 'Practice each answer in two versions: 30-45 seconds and 90 seconds, then keep examples specific and measurable.',
+      },
     ],
   },
   'power-bi': {
