@@ -1,0 +1,18 @@
+.topic-placeholder {
+  background: #f8fafc;
+  border: 1px dashed #93c5fd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.topic-placeholder h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.topic-placeholder p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
