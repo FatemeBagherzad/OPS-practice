@@ -230,6 +230,57 @@ export const coffeeChatSheets = {
     title: '☕ Luke Coffee Chat Prep',
     sections: [
       {
+        title: '0. About Luke (Everything We Know So Far)',
+        variant: 'cheat-card--sky',
+        list: [
+          {
+            label: 'How you are connected:',
+            text: 'Alan Harnum introduced you to Luke in a LinkedIn group message.',
+          },
+          {
+            label: 'Luke direct response to you:',
+            text: 'He replied positively and invited you to email him directly to coordinate time.',
+          },
+          {
+            label: 'Contact he shared:',
+            text: 'luke.simcoe@toronto.ca',
+          },
+          {
+            label: 'Availability he shared:',
+            text: 'Weekdays after 4pm are usually flexible.',
+          },
+          {
+            label: 'Current organization:',
+            text: 'City of Toronto.',
+          },
+          {
+            label: 'Current role (profile info):',
+            text: 'Senior Policy Analyst, IT.',
+          },
+          {
+            label: 'Relevant previous public-sector/civic background:',
+            text: 'Worked in Ontario government settings and held leadership roles connected to digital strategy, service modernization, and change management.',
+          },
+          {
+            label: 'Code for Canada background:',
+            text: 'Former Director of Outreach and also served as Co-Executive Director (Acting).',
+          },
+          {
+            label: 'Earlier background:',
+            text: 'Journalism/media leadership experience before moving deeper into digital public-service work.',
+          },
+          {
+            label: 'Themes he is likely to care about:',
+            text: 'Public impact, user-centred service design, cross-functional collaboration, digital transformation, and practical policy-to-delivery execution.',
+          },
+          {
+            label: 'How to position yourself with him:',
+            text: 'Show a practical builder mindset: full-stack + data + QA automation + deployment + accessibility awareness, and strong interest in meaningful public outcomes.',
+          },
+        ],
+        note: 'Use this as your quick pre-chat brief so you can tailor your examples and questions to his background.',
+      },
+      {
         title: '1. What This Conversation Likely Is',
         variant: 'cheat-card--sky',
         list: [
