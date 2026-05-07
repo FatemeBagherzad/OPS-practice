@@ -11,10 +11,14 @@ export const weeks = [
         tasks: [
           'Submit application with Fatemeh-Bagherzad-242255.pdf',
           'Reply to Reese on LinkedIn and request coffee chat',
-          'Confirm Alan chat scheduling',
+          { label: 'Confirm Alan chat scheduling', checked: true },
           'Message Ben Lou on LinkedIn',
-          'Send Hana update message',
-          'Install Power BI Desktop and sign up for Azure free account',
+          { label: 'Send Hana update message', checked: true },
+          {
+            label:
+              'Install Power BI Desktop and sign up for Azure free account',
+            checked: true,
+          },
         ],
       },
       {
