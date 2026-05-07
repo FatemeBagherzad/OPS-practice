@@ -298,6 +298,10 @@ body {
   .page {
     padding: 1rem 0.7rem 1.6rem;
   }
+  .hero p {
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
   .panel-group {
     padding: 0.8rem;
   }
