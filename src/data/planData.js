@@ -85,6 +85,7 @@ export const weeks = [
         title: 'Tue, May 12',
         heading: 'Tue, May 12 - Databricks + SQL Refresh (2.5 hrs)',
         tasks: [
+          'Meeting with Alan: Tue, May 12 • 10:30 AM - 11:00 AM',
           'Databricks SQL Foundations module',
           'Run sample notebook in Community Edition',
           'Refresh CTE and window function SQL concepts',
