@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function renderListItem(item) {
   if (typeof item === 'string') {
     return item;
@@ -32,47 +34,90 @@ function renderParagraph(paragraph, index) {
 }
 
 function ContentSheet({ title, sections }) {
+  const [collapsedGroups, setCollapsedGroups] = useState({});
+
+  const toggleCollapse = (groupKey) => {
+    setCollapsedGroups((prev) => ({
+      ...prev,
+      [groupKey]: !prev[groupKey],
+    }));
+  };
+
   return (
     <section className="cheat-sheet">
       <h2 className="cheat-sheet__title">{title}</h2>
-      {sections.map((section) => (
-        <article
-          key={section.title}
-          className={`cheat-card ${section.variant || 'cheat-card--neutral'}`}
-        >
-          <h3>{section.title}</h3>
+      {sections.map((section) => {
+        const isCollapsible = section.isCollapsible || false;
+        const groupKey = section.collapsibleGroup;
+        const isGroupCollapsed = groupKey
+          ? collapsedGroups[groupKey] || false
+          : false;
+        const shouldHide = groupKey && isGroupCollapsed && !isCollapsible;
 
-          {section.paragraphs?.map(renderParagraph)}
-
-          {section.list ? (
-            <ul>
-              {section.list.map((item, index) => (
-                <li key={index}>{renderListItem(item)}</li>
-              ))}
-            </ul>
-          ) : null}
-
-          {section.orderedList ? (
-            <ol>
-              {section.orderedList.map((item, index) => (
-                <li key={index}>{renderListItem(item)}</li>
-              ))}
-            </ol>
-          ) : null}
-
-          {section.tags ? (
-            <div className="cheat-tags">
-              {section.tags.map((tag) => (
-                <span key={tag} className="cheat-tag">
-                  {tag}
+        return (
+          <article
+            key={section.title}
+            className={`cheat-card ${section.variant || 'cheat-card--neutral'}`}
+            style={{ display: shouldHide ? 'none' : 'block' }}
+          >
+            <h3
+              onClick={() =>
+                isCollapsible && groupKey && toggleCollapse(groupKey)
+              }
+              style={{
+                cursor: isCollapsible ? 'pointer' : 'default',
+              }}
+            >
+              {isCollapsible && groupKey && (
+                <span
+                  style={{
+                    marginRight: '8px',
+                  }}
+                >
+                  {isGroupCollapsed ? '▶' : '▼'}
                 </span>
-              ))}
-            </div>
-          ) : null}
+              )}
+              {section.title}
+            </h3>
 
-          {section.note ? <p className="cheat-note">{section.note}</p> : null}
-        </article>
-      ))}
+            {!shouldHide && (
+              <>
+                {section.paragraphs?.map(renderParagraph)}
+
+                {section.list ? (
+                  <ul>
+                    {section.list.map((item, index) => (
+                      <li key={index}>{renderListItem(item)}</li>
+                    ))}
+                  </ul>
+                ) : null}
+
+                {section.orderedList ? (
+                  <ol>
+                    {section.orderedList.map((item, index) => (
+                      <li key={index}>{renderListItem(item)}</li>
+                    ))}
+                  </ol>
+                ) : null}
+
+                {section.tags ? (
+                  <div className="cheat-tags">
+                    {section.tags.map((tag) => (
+                      <span key={tag} className="cheat-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.note ? (
+                  <p className="cheat-note">{section.note}</p>
+                ) : null}
+              </>
+            )}
+          </article>
+        );
+      })}
     </section>
   );
 }

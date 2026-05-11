@@ -96,7 +96,6 @@ export const weeks = [
         title: 'Wed, May 13',
         heading: 'Wed, May 13 - Data Modeling Concepts (2 hrs)',
         tasks: [
-          'Meeting with Jamie: Wed, May 13th at 11:30 AM',
           'Read star schema versus snowflake schema',
           'Review fact and dimension table roles',
           'Review OLAP vs OLTP and ETL vs ELT',
