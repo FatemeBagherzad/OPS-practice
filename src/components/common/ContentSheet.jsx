@@ -1,36 +1,62 @@
 import { useState } from 'react';
 
+function renderTextWithLinks(text) {
+  if (!text) {
+    return '';
+  }
+
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+
+  return parts.map((part, index) => {
+    if (/^https?:\/\/\S+$/.test(part)) {
+      return (
+        <a
+          key={`${part}-${index}`}
+          href={part}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {part}
+        </a>
+      );
+    }
+
+    return <span key={`${part}-${index}`}>{part}</span>;
+  });
+}
+
 function renderListItem(item) {
   if (typeof item === 'string') {
-    return item;
+    return renderTextWithLinks(item);
   }
 
   if (item.label) {
     return (
       <>
         <strong>{item.label}</strong>
-        {item.text ? ` ${item.text}` : ''}
+        {item.text ? <> {renderTextWithLinks(item.text)}</> : ''}
       </>
     );
   }
 
-  return item.text || '';
+  return renderTextWithLinks(item.text || '');
 }
 
 function renderParagraph(paragraph, index) {
   if (typeof paragraph === 'string') {
-    return <p key={index}>{paragraph}</p>;
+    return <p key={index}>{renderTextWithLinks(paragraph)}</p>;
   }
 
   if (paragraph.label) {
     return (
       <p key={index}>
-        <strong>{paragraph.label}</strong> {paragraph.text}
+        <strong>{paragraph.label}</strong> {renderTextWithLinks(paragraph.text)}
       </p>
     );
   }
 
-  return <p key={index}>{paragraph.text}</p>;
+  return <p key={index}>{renderTextWithLinks(paragraph.text)}</p>;
 }
 
 function ContentSheet({ title, sections }) {
@@ -82,6 +108,45 @@ function ContentSheet({ title, sections }) {
 
             {!shouldHide && (
               <>
+                {section.code ? (
+                  <pre className="cheat-code">
+                    <code>{section.code}</code>
+                  </pre>
+                ) : null}
+
+                {section.subsections?.length ? (
+                  <div className="cheat-subsections">
+                    {section.subsections.map((subsection) => (
+                      <section
+                        key={subsection.title}
+                        className="cheat-subsection"
+                      >
+                        <h4>{subsection.title}</h4>
+
+                        {subsection.code ? (
+                          <pre className="cheat-code">
+                            <code>{subsection.code}</code>
+                          </pre>
+                        ) : null}
+
+                        {subsection.list ? (
+                          <ul>
+                            {subsection.list.map((item, index) => (
+                              <li key={index}>{renderListItem(item)}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+
+                        {subsection.note ? (
+                          <p className="cheat-note">
+                            {renderTextWithLinks(subsection.note)}
+                          </p>
+                        ) : null}
+                      </section>
+                    ))}
+                  </div>
+                ) : null}
+
                 {section.paragraphs?.map(renderParagraph)}
 
                 {section.list ? (
@@ -111,7 +176,9 @@ function ContentSheet({ title, sections }) {
                 ) : null}
 
                 {section.note ? (
-                  <p className="cheat-note">{section.note}</p>
+                  <p className="cheat-note">
+                    {renderTextWithLinks(section.note)}
+                  </p>
                 ) : null}
               </>
             )}

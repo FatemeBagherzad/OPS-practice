@@ -1,5 +1,6 @@
 export const topicMenuItems = [
   { key: 'mccss-accessibility', title: 'MCCSS / Accessibility' },
+  { key: 'python', title: 'Python' },
   { key: 'power-bi', title: 'Power BI' },
   { key: 'dax', title: 'DAX' },
   { key: 'azure', title: 'Azure' },
@@ -232,6 +233,345 @@ export const topicSheets = {
           },
         ],
         note: 'Practice each answer in two versions: 30-45 seconds and 90 seconds, then keep examples specific and measurable.',
+      },
+    ],
+  },
+  python: {
+    title: 'Python Cheat Sheet',
+    sections: [
+      {
+        title: '1. Getting Started / Introduction',
+        variant: 'cheat-card--sky',
+        list: [
+          'Official docs: python.org',
+          'Quick reference: https://quickref.me/python.html',
+          'Python supports scripts, REPL, and notebooks.',
+          'Strong standard library and readable syntax.',
+        ],
+      },
+      {
+        title: '2. Hello World',
+        variant: 'cheat-card--sky',
+        code: '>>> print("Hello, World!")\nHello, World!',
+      },
+      {
+        title: '3. Variables',
+        variant: 'cheat-card--green',
+        code: 'age = 18      # age is of type int\nname = "John" # name is now of type str\nprint(name)',
+      },
+      {
+        title: '4. Data Types',
+        variant: 'cheat-card--yellow',
+        list: [
+          'str -> Text',
+          'int, float, complex -> Numeric',
+          'list, tuple, range -> Sequence',
+          'dict -> Mapping',
+          'set, frozenset -> Set',
+          'bool -> Boolean',
+          'bytes, bytearray, memoryview -> Binary',
+        ],
+      },
+      {
+        title: '5. Slicing String',
+        variant: 'cheat-card--violet',
+        code: '>>> msg = "Hello, World!"\n>>> print(msg[2:5])\nllo',
+      },
+      {
+        title: '6. Lists',
+        variant: 'cheat-card--orange',
+        code: 'mylist = []\nmylist.append(1)\nmylist.append(2)\nfor item in mylist:\n    print(item) # prints out 1,2',
+      },
+      {
+        title: '7. If Else',
+        variant: 'cheat-card--red',
+        code: 'num = 200\nif num > 0:\n    print("num is greater than 0")\nelse:\n    print("num is not greater than 0")',
+      },
+      {
+        title: '8. Loops',
+        variant: 'cheat-card--neutral',
+        code: 'for item in range(6):\n    if item == 3: break\n    print(item)\nelse:\n    print("Finally finished!")',
+      },
+      {
+        title: '9. Functions',
+        variant: 'cheat-card--green-strong',
+        code: '>>> def my_function():\n...     print("Hello from a function")\n...\n>>> my_function()\nHello from a function',
+      },
+      {
+        title: '10. File Handling',
+        variant: 'cheat-card--sky',
+        code: 'with open("myfile.txt", "r", encoding=\'utf8\') as file:\n    for line in file:\n        print(line)',
+      },
+      {
+        title: '11. Arithmetic',
+        variant: 'cheat-card--green',
+        code: 'result = 10 + 30 # => 40\nresult = 40 - 10 # => 30\nresult = 50 * 5  # => 250\nresult = 16 / 4  # => 4.0\nresult = 16 // 4 # => 4\nresult = 25 % 2  # => 1\nresult = 5 ** 3  # => 125',
+      },
+      {
+        title: '12. Plus-Equals',
+        variant: 'cheat-card--yellow',
+        code: 'counter = 0\ncounter += 10           # => 10\ncounter = 0\ncounter = counter + 10  # => 10\n\nmessage = "Part 1."\nmessage += "Part 2."',
+      },
+      {
+        title: '13. f-Strings (Python 3.6+)',
+        variant: 'cheat-card--violet',
+        code: ">>> website = 'Quickref.ME'\n>>> f\"Hello, {website}\"\n\"Hello, Quickref.ME\"\n\n>>> num = 10\n>>> f'{num} + 10 = {num + 10}'\n'10 + 10 = 20'",
+      },
+      {
+        title: '14. Python Built-in Data Types',
+        variant: 'cheat-card--sky',
+        subsections: [
+          {
+            title: 'Strings',
+            code: 'hello = "Hello World"\nhello = \'Hello World\'\n\nmulti_string = """Multiline Strings\nLorem ipsum dolor sit amet\n"""',
+          },
+          {
+            title: 'Numbers',
+            code: 'x = 1    # int\ny = 2.8  # float\nz = 1j   # complex\nprint(type(x))',
+          },
+          {
+            title: 'Booleans',
+            code: 'my_bool = True\nmy_bool = False\n\nbool(0)  # => False\nbool(1)  # => True',
+          },
+          {
+            title: 'Lists / Tuple / Set',
+            code: 'list1 = ["apple", "banana", "cherry"]\nmy_tuple = (1, 2, 3)\nset1 = {"a", "b", "c"}',
+          },
+          {
+            title: 'Dictionary',
+            code: 'empty_dict = {}\na = {"one": 1, "two": 2, "three": 3}\na["one"]\na.update({"four": 4})\na["four"]',
+            note: 'Key: Value pair, JSON-like object.',
+          },
+        ],
+      },
+      {
+        title: '15. Casting',
+        variant: 'cheat-card--green',
+        subsections: [
+          {
+            title: 'Integers',
+            code: 'x = int(1)\ny = int(2.8)\nz = int("3")',
+          },
+          {
+            title: 'Floats',
+            code: 'x = float(1)\ny = float(2.8)\nz = float("3")\nw = float("4.2")',
+          },
+          {
+            title: 'Strings',
+            code: 'x = str("s1")\ny = str(2)\nz = str(3.0)',
+          },
+        ],
+      },
+      {
+        title: '16. Python Advanced Data Types',
+        variant: 'cheat-card--yellow',
+        subsections: [
+          {
+            title: 'Heaps',
+            code: 'import heapq\nnums = [9, 5, 4, 1, 3, 2]\nheapq.heapify(nums)\nheapq.heappush(nums, 10)\nsmallest = heapq.heappop(nums)',
+          },
+          {
+            title: 'Max Heap Trick (negate)',
+            code: 'nums = [9, 5, 4, 1, 3, 2]\nnums = [-x for x in nums]\nheapq.heapify(nums)\nmax_val = -heapq.heappop(nums)',
+          },
+          {
+            title: 'Stacks and Queues (deque)',
+            code: 'from collections import deque\nq = deque([1, 2, 3])\nq.append(4)\nq.appendleft(0)\nright = q.pop()\nleft = q.popleft()',
+          },
+        ],
+      },
+      {
+        title: '17. Python Strings',
+        variant: 'cheat-card--violet',
+        subsections: [
+          {
+            title: 'Array-like / Looping',
+            code: 'hello = "Hello, World"\nprint(hello[1])\nprint(hello[-1])\n\nfor char in "foo":\n    print(char)',
+          },
+          {
+            title: 'Slicing',
+            code: 's = "mybacon"\nprint(s[2:5])\nprint(s[:2])\nprint(s[2:])\nprint(s[-5:-1])\nprint(s[::-1])',
+          },
+          {
+            title: 'Utilities',
+            code: 'len("Hello")\n"spam" in "I saw spamalot!"\n"#".join(["John", "Peter", "Vicky"])\n"Hello, world!".endswith("!")',
+          },
+          {
+            title: 'Formatting and Input',
+            code: 'name = "John"\nprint("Hello, %s!" % name)\nprint("{} is {} years old".format("John", 23))\nuser = input("Enter your name: ")',
+          },
+        ],
+      },
+      {
+        title: '18. Python F-Strings (Deep Dive)',
+        variant: 'cheat-card--orange',
+        subsections: [
+          {
+            title: 'Fill / Align',
+            code: 'f"{"text":10}"\nf"{"test":*>10}"\nf"{"test":*<10}"\nf"{"test":*^10}"',
+          },
+          {
+            title: 'Type Format',
+            code: 'f"{10:b}"\nf"{10:o}"\nf"{200:x}"\nf"{200:X}"\nf"{345600000000:e}"\nf"{65:c}"',
+          },
+          {
+            title: 'Sign / Precision / Percent',
+            code: 'f"{12345:+}"\nf"{-12345:+010}"\nf"{3.1415926535:.2f}"\nf"{1000000:,.2f}"\nf"{0.25:.0%}"',
+          },
+        ],
+      },
+      {
+        title: '19. Python Lists (Deep Dive)',
+        variant: 'cheat-card--red',
+        subsections: [
+          {
+            title: 'Defining / Generate / Append',
+            code: 'li1 = []\nli2 = [4, 5, 6]\nli3 = list((1, 2, 3))\nodd_sq = [x ** 2 for x in range(1, 11) if x % 2 == 1]\nli1.append(1)',
+          },
+          {
+            title: 'Slicing',
+            code: 'a = ["spam", "egg", "bacon", "tomato", "ham", "lobster"]\na[2:5]\na[:4]\na[::2]\na[::-1]',
+          },
+          {
+            title: 'Remove / Access / Concat',
+            code: 'li = ["bread", "butter", "milk"]\nli.pop()\ndel li[0]\nodd = [1, 3, 5]\nodd.extend([9, 11, 13])',
+          },
+          {
+            title: 'Sort / Reverse / Count / Repeat',
+            code: 'li = [3, 1, 3, 2, 5]\nli.sort()\nli.reverse()\nli.count(3)\n["re"] * 3',
+          },
+        ],
+      },
+      {
+        title: '20. Python Flow Control',
+        variant: 'cheat-card--neutral',
+        subsections: [
+          {
+            title: 'Basic if/elif/else',
+            code: 'num = 5\nif num > 10:\n    print("big")\nelif num < 10:\n    print("small")\nelse:\n    print("ten")',
+          },
+          {
+            title: 'One line',
+            code: 'a = 330\nb = 200\nr = "a" if a > b else "b"',
+          },
+          {
+            title: 'Boolean branch',
+            code: 'value = True\nif not value:\n    print("False")\nelif value is None:\n    print("None")\nelse:\n    print("True")',
+          },
+        ],
+      },
+      {
+        title: '21. Python Loops (Deep Dive)',
+        variant: 'cheat-card--green-strong',
+        subsections: [
+          {
+            title: 'Basic / enumerate / while',
+            code: 'for prime in [2, 3, 5, 7]:\n    print(prime)\n\nfor i, value in enumerate(["dog", "cat", "mouse"]):\n    print(i, value)\n\nx = 0\nwhile x < 4:\n    print(x)\n    x += 1',
+          },
+          {
+            title: 'break / continue / range',
+            code: 'for index in range(10):\n    if index == 5:\n        break\n\nfor index in range(3, 8):\n    if index == 5:\n        continue\n\nfor i in range(4, 10, 2):\n    print(i)',
+          },
+          {
+            title: 'zip / for-else',
+            code: 'words = ["Mon", "Tue", "Wed"]\nnums = [1, 2, 3]\nfor w, n in zip(words, nums):\n    print(f"{n}:{w}")\n\nnums2 = [60, 70, 30]\nfor n in nums2:\n    if n > 100:\n        break\nelse:\n    print("Not found!")',
+          },
+        ],
+      },
+      {
+        title: '22. Python Functions (Deep Dive)',
+        variant: 'cheat-card--sky',
+        subsections: [
+          {
+            title: 'Basic / Return',
+            code: 'def hello_world():\n    print("Hello, World!")\n\ndef add(x, y):\n    return x + y',
+          },
+          {
+            title: 'Arguments',
+            code: 'def varargs(*args):\n    return args\n\ndef keyword_args(**kwargs):\n    return kwargs',
+          },
+          {
+            title: 'Multiple return / Default / Lambda',
+            code: 'def swap(x, y):\n    return y, x\n\ndef add2(x, y=10):\n    return x + y\n\n(lambda x: x > 2)(3)',
+          },
+        ],
+      },
+      {
+        title: '23. Python Modules',
+        variant: 'cheat-card--green',
+        subsections: [
+          {
+            title: 'Import patterns',
+            code: 'import math\nfrom math import ceil, floor\nimport math as m\nfrom math import *',
+          },
+          {
+            title: 'Use / inspect',
+            code: 'print(math.sqrt(16))\nprint(ceil(3.7))\nprint(floor(3.7))\ndir(math)',
+          },
+        ],
+      },
+      {
+        title: '24. Python File Handling (Deep Dive)',
+        variant: 'cheat-card--yellow',
+        subsections: [
+          {
+            title: 'Read file',
+            code: 'with open("myfile.txt") as file:\n    for line in file:\n        print(line)\n\nfor i, line in enumerate(open("myfile.txt"), start=1):\n    print(i, line)',
+          },
+          {
+            title: 'Write / Read string',
+            code: 'contents = {"aa": 12, "bb": 21}\nwith open("myfile1.txt", "w+") as file:\n    file.write(str(contents))\n\nwith open("myfile1.txt", "r+") as file:\n    print(file.read())',
+          },
+          {
+            title: 'Write / Read object (json)',
+            code: 'import json\ncontents = {"aa": 12, "bb": 21}\nwith open("myfile2.txt", "w+") as file:\n    file.write(json.dumps(contents))\n\nwith open("myfile2.txt", "r+") as file:\n    data = json.load(file)',
+          },
+          {
+            title: 'Delete file / folder',
+            code: 'import os\nif os.path.exists("myfile.txt"):\n    os.remove("myfile.txt")\n\nos.rmdir("myfolder")',
+          },
+        ],
+      },
+      {
+        title: '25. Python Classes & Inheritance',
+        variant: 'cheat-card--violet',
+        subsections: [
+          {
+            title: 'Defining / Constructor / Method',
+            code: 'class MyNewClass:\n    pass\n\nclass Animal:\n    def __init__(self, voice):\n        self.voice = voice\n\nclass Dog:\n    def bark(self):\n        print("Ham-Ham")',
+          },
+          {
+            title: 'Class variables / super()',
+            code: 'class ParentClass:\n    def print_test(self):\n        print("Parent Method")\n\nclass ChildClass(ParentClass):\n    def print_test(self):\n        print("Child Method")\n        super().print_test()',
+          },
+          {
+            title: 'repr / exceptions / overriding',
+            code: 'class Employee:\n    def __init__(self, name):\n        self.name = name\n    def __repr__(self):\n        return self.name\n\nclass CustomError(Exception):\n    pass',
+          },
+          {
+            title: 'Inheritance / polymorphism',
+            code: 'class Animal:\n    def __init__(self, name, legs):\n        self.name = name\n        self.legs = legs\n\nclass Dog(Animal):\n    def sound(self):\n        print("Woof!")',
+          },
+        ],
+      },
+      {
+        title: '26. Miscellaneous',
+        variant: 'cheat-card--orange',
+        subsections: [
+          {
+            title: 'Comments',
+            code: '# single line comment\n"""multiline doc-style comment"""\n\'\'\'another multiline\'\'\'',
+          },
+          {
+            title: 'Generators',
+            code: 'def double_numbers(iterable):\n    for i in iterable:\n        yield i + i\n\nvals = (-x for x in [1, 2, 3, 4, 5])\nprint(list(vals))',
+          },
+          {
+            title: 'Handle exceptions',
+            code: 'try:\n    raise IndexError("This is an index error")\nexcept IndexError:\n    pass\nexcept (TypeError, NameError):\n    pass\nelse:\n    print("All good!")\nfinally:\n    print("Cleanup")',
+          },
+        ],
+        note: 'This page mirrors the quickref-style layout and coverage with app-native formatting.',
       },
     ],
   },
